@@ -69,8 +69,7 @@ LRESULT CALLBACK WindowProc (HWND hWnd, UINT message, WPARAM wParam, LPARAM lPar
 				GetClientRect(hWnd, &rect);
 				int x = LOWORD(lParam);
 				int y = HIWORD(lParam);
-				if(x >= rect.right / 4 && x <= rect.right * 3 / 4 && 
-				   y >= rect.bottom / 4 && y <= rect.bottom * 3 / 4)
+				if(x >= rect.right / 2)
 					SetCursor(hCursor1); 
 				else
 					SetCursor(hCursor2); 
